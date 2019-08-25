@@ -7,8 +7,8 @@ public class CorridorTile : MonoBehaviour
     public bool HaveRoom { get; set; }
 
     public Direction direction;
-
     public Transform roomSpawn;
+    public CorridorTile oppositeCorridor;
 }
 
 public enum Direction

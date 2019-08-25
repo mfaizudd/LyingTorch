@@ -45,16 +45,16 @@ public class RoomTile : MonoBehaviour
     public List<RoomTile> RandomlySpawnRoom(int min = 0)
     {
         var available = GetEmptyLocations();
-        int roomCount = Random.Range(min, available.Count);
+        int roomCount = Random.Range(Mathf.Min(min, available.Count), available.Count);
         var generatedRoom = new List<RoomTile>();
         for (int i = 0; i < roomCount; i++)
         {
             var spawnOn = available[Random.Range(0, available.Count)];
             available.Remove(spawnOn);
-            var spawnedRoom = Instantiate(roomPrefab, spawnOn.roomSpawn.transform.position, spawnOn.roomSpawn.transform.rotation);
+            var spawnedRoom = Instantiate(roomPrefab, spawnOn.roomSpawn.transform.position, Quaternion.identity);
             spawnOn.HaveRoom = true;
             spawnOn.gameObject.SetActive(true);
-            spawnedRoom.GetOppositeDirection(spawnOn.direction).HaveRoom = true;
+            spawnedRoom.GetOppositeCorridor(spawnOn.direction).HaveRoom = true;
             generatedRoom.Add(spawnedRoom);
         }
         return generatedRoom;
@@ -78,20 +78,8 @@ public class RoomTile : MonoBehaviour
         return true;
     }
 
-    public CorridorTile GetOppositeDirection(Direction direction)
+    public CorridorTile GetOppositeCorridor(Direction direction)
     {
-        switch (direction)
-        {
-            case Direction.Up:
-                return corridorDictionary[Direction.Down];
-            case Direction.Right:
-                return corridorDictionary[Direction.Left];
-            case Direction.Down:
-                return corridorDictionary[Direction.Up];
-            case Direction.Left:
-                return corridorDictionary[Direction.Right];
-            default:
-                return null;
-        }
+        return corridorDictionary[direction].oppositeCorridor;
     }
 }

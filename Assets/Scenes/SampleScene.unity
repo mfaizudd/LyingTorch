@@ -182,7 +182,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 566311893}
   roomPrefab: {fileID: 239602199015314520, guid: c2ad6788329fc42489a7cebca664b9db,
     type: 3}
-  iterations: 3
+  iterations: 10
 --- !u!4 &653309112
 Transform:
   m_ObjectHideFlags: 0

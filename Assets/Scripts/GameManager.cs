@@ -18,28 +18,28 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        GenerateRoom(iterations);
+        GenerateRoom();
     }
 
-    public void GenerateRoom(int iteration, List<RoomTile> targetRoom = null)
+    public void GenerateRoom(List<RoomTile> targetRoom = null)
     {
-        if (iteration <= 0)
+        if (iterations <= 0)
             return;
 
         if(targetRoom==null)
         {
             var currentRoom = Instantiate(roomPrefab, spawnLocation.position, spawnLocation.rotation);
             var roomsGenerated = currentRoom.RandomlySpawnRoom(1);
-            iteration -= roomsGenerated.Count;
-            GenerateRoom(iteration, roomsGenerated);
+            iterations -= roomsGenerated.Count;
+            GenerateRoom(roomsGenerated);
         }
-        else
+        else if (iterations > 0)
         {
             foreach (var item in targetRoom)
             {
-                var roomsGenerated = item.RandomlySpawnRoom();
-                iteration -= roomsGenerated.Count;
-                GenerateRoom(iteration, roomsGenerated);
+                var roomsGenerated = item.RandomlySpawnRoom(1);
+                iterations -= roomsGenerated.Count;
+                GenerateRoom(roomsGenerated);
             }
         }
     }
