@@ -70,13 +70,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1155525829053596115}
   - component: {fileID: 6649245930968961896}
+  - component: {fileID: 7421152316452836194}
   m_Layer: 0
   m_Name: Corridor Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1155525829053596115
 Transform:
   m_ObjectHideFlags: 0
@@ -99,7 +100,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376062491224156536}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -140,6 +141,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7421152316452836194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376062491224156536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347f210e8d7a57745b442ae1e604f248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 1
+  roomSpawn: {fileID: 3457982178319281550}
 --- !u!1 &3587806724673778950
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,13 +165,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7508567089757573377}
   - component: {fileID: 1117407592769558714}
+  - component: {fileID: 7615174355600195607}
   m_Layer: 0
   m_Name: Corridor Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7508567089757573377
 Transform:
   m_ObjectHideFlags: 0
@@ -179,7 +195,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3587806724673778950}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -220,6 +236,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7615174355600195607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587806724673778950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347f210e8d7a57745b442ae1e604f248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 3
+  roomSpawn: {fileID: 1202941374391879452}
 --- !u!1 &5522920048253511053
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,13 +320,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5144105843697476960}
   - component: {fileID: 1507702094798387090}
+  - component: {fileID: 5733498137962731198}
   m_Layer: 0
   m_Name: Corridor Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5144105843697476960
 Transform:
   m_ObjectHideFlags: 0
@@ -319,7 +350,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8211935634844580417}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -360,6 +391,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5733498137962731198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211935634844580417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347f210e8d7a57745b442ae1e604f248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 0
+  roomSpawn: {fileID: 6597330684619239503}
 --- !u!1 &8849798547768816358
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,13 +415,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1451724248981850869}
   - component: {fileID: 3506360658974542976}
+  - component: {fileID: 4924543705682487437}
   m_Layer: 0
   m_Name: Corridor Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1451724248981850869
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +445,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8849798547768816358}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -440,6 +486,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4924543705682487437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8849798547768816358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347f210e8d7a57745b442ae1e604f248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 2
+  roomSpawn: {fileID: 5643258834745948671}
 --- !u!1 &9073896130473496668
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,8 +597,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corridorSpawns:
-  - {fileID: 1155525829053596115}
-  - {fileID: 7508567089757573377}
-  - {fileID: 5144105843697476960}
-  - {fileID: 1451724248981850869}
+  - {fileID: 7421152316452836194}
+  - {fileID: 7615174355600195607}
+  - {fileID: 5733498137962731198}
+  - {fileID: 4924543705682487437}
   roomSpawns: []
+  roomPrefab: {fileID: 239602199015314520}
+  roomCheckRadius: 1
