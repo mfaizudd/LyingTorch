@@ -16,9 +16,12 @@ public class GameManager : MonoBehaviour
     public RoomTile roomPrefab;
     public int iterations;
 
+    private List<RoomTile> rooms = new List<RoomTile>();
+
     private void Start()
     {
         GenerateRoom();
+        GenerateExit();
     }
 
     public void GenerateRoom(List<RoomTile> targetRoom = null)
@@ -30,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             var currentRoom = Instantiate(roomPrefab, spawnLocation.position, spawnLocation.rotation);
             var roomsGenerated = currentRoom.RandomlySpawnRoom(1);
+            rooms.AddRange(roomsGenerated);
             iterations -= roomsGenerated.Count;
             GenerateRoom(roomsGenerated);
         }
@@ -38,9 +42,39 @@ public class GameManager : MonoBehaviour
             foreach (var item in targetRoom)
             {
                 var roomsGenerated = item.RandomlySpawnRoom(1);
+                rooms.AddRange(roomsGenerated);
+                foreach (var room in roomsGenerated)
+                {
+                    room.GetComponent<SpriteRenderer>().color = Color.white;
+                }
+
+                if(rooms.Count % 5 == 0 && roomsGenerated.Count > 0)
+                {
+                    roomsGenerated[0].gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                }
+
                 iterations -= roomsGenerated.Count;
                 GenerateRoom(roomsGenerated);
             }
+        }
+    }
+
+    public void GenerateExit()
+    {
+        bool exitSpawned = false;
+
+        int lastIndex = rooms.Count / 2;
+        while(!exitSpawned && lastIndex >= 0)
+        {
+            exitSpawned = rooms[lastIndex].SpawnExit();
+            lastIndex--;
+        }
+
+        lastIndex = rooms.Count / 2;
+        while(!exitSpawned && lastIndex < rooms.Count)
+        {
+            exitSpawned = rooms[lastIndex].SpawnExit();
+            lastIndex++;
         }
     }
 }

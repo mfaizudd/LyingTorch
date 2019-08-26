@@ -17,6 +17,7 @@ public class RoomTile : MonoBehaviour
         foreach (var item in corridorSpawns)
         {
             corridorDictionary.Add(item.direction, item);
+            item.ConnectedRoom = null;
         }
     }
 
@@ -52,12 +53,24 @@ public class RoomTile : MonoBehaviour
             var spawnOn = available[Random.Range(0, available.Count)];
             available.Remove(spawnOn);
             var spawnedRoom = Instantiate(roomPrefab, spawnOn.roomSpawn.transform.position, Quaternion.identity);
-            spawnOn.HaveRoom = true;
-            spawnOn.gameObject.SetActive(true);
-            spawnedRoom.GetOppositeCorridor(spawnOn.direction).HaveRoom = true;
+            spawnOn.ConnectedRoom = spawnedRoom;
+            spawnedRoom.GetOppositeCorridor(spawnOn.direction).ConnectedRoom = this;
             generatedRoom.Add(spawnedRoom);
         }
         return generatedRoom;
+    }
+
+    public bool SpawnExit()
+    {
+        var available = GetEmptyLocations();
+        if(available.Any())
+        {
+            var exitOn = available[Random.Range(0, available.Count)];
+            exitOn.GetComponent<SpriteRenderer>().color = Color.red;
+            exitOn.gameObject.SetActive(true);
+            return true;
+        }
+        return false;
     }
 
     public bool CheckLocationIsEmpty(Transform transform)
