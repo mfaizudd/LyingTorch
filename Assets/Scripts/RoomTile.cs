@@ -9,6 +9,7 @@ public class RoomTile : MonoBehaviour
     public Transform[] roomSpawns;
     public RoomTile roomPrefab;
     public float roomCheckRadius = 1f;
+    public LayerMask roomLayer;
 
     private Dictionary<Direction, CorridorTile> corridorDictionary = new Dictionary<Direction, CorridorTile>();
 
@@ -17,7 +18,7 @@ public class RoomTile : MonoBehaviour
         foreach (var item in corridorSpawns)
         {
             corridorDictionary.Add(item.direction, item);
-            item.ConnectedRoom = null;
+            item.HaveRoom = false;
         }
     }
 
@@ -53,8 +54,8 @@ public class RoomTile : MonoBehaviour
             var spawnOn = available[Random.Range(0, available.Count)];
             available.Remove(spawnOn);
             var spawnedRoom = Instantiate(roomPrefab, spawnOn.roomSpawn.transform.position, Quaternion.identity);
-            spawnOn.ConnectedRoom = spawnedRoom;
-            spawnedRoom.GetOppositeCorridor(spawnOn.direction).ConnectedRoom = this;
+            spawnOn.HaveRoom = true;
+            spawnedRoom.GetOppositeCorridor(spawnOn.direction).HaveRoom = true;
             generatedRoom.Add(spawnedRoom);
         }
         return generatedRoom;
@@ -75,7 +76,7 @@ public class RoomTile : MonoBehaviour
 
     public bool CheckLocationIsEmpty(Transform transform)
     {
-        var room = Physics2D.OverlapCircle(transform.position, roomCheckRadius);
+        var room = Physics2D.OverlapCircle(transform.position, roomCheckRadius, roomLayer);
         if (room != null)
             return !room.CompareTag(roomPrefab.tag);
         else

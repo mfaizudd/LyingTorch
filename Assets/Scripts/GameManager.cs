@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     #region Singleton
-    public GameManager Instance { get; private set; }
+    public static GameManager Instance { get; private set; }
     private void Awake()
     {
         Instance = this;
@@ -15,13 +17,46 @@ public class GameManager : MonoBehaviour
     public Transform spawnLocation;
     public RoomTile roomPrefab;
     public int iterations;
+    public Torch torchPrefab;
+    public TextMeshProUGUI interactionText;
+    public Slider healthBar;
+    public Monster monsterPrefab;
+    public int maxMonstersPerRoom = 3;
+    public GameObject loading;
 
     private List<RoomTile> rooms = new List<RoomTile>();
 
     private void Start()
     {
+        StartCoroutine(InitializeWorld());
+    }
+
+    IEnumerator InitializeWorld()
+    {
+        loading.SetActive(true);
         GenerateRoom();
         GenerateExit();
+        GenerateMonsterOnRooms();
+        loading.SetActive(false);
+        yield return null;
+    }
+
+    private void GenerateMonsterOnRooms()
+    {
+        bool first = true;
+        foreach (var item in rooms)
+        {
+            if(first)
+            {
+                first = false;
+                continue;
+            }
+            var totalMonster = Random.Range(0, maxMonstersPerRoom);
+            for (int i = 0; i < totalMonster; i++)
+            {
+                Instantiate(monsterPrefab, item.transform.position, item.transform.rotation);
+            }
+        }
     }
 
     public void GenerateRoom(List<RoomTile> targetRoom = null)
@@ -43,14 +78,10 @@ public class GameManager : MonoBehaviour
             {
                 var roomsGenerated = item.RandomlySpawnRoom(1);
                 rooms.AddRange(roomsGenerated);
-                foreach (var room in roomsGenerated)
-                {
-                    room.GetComponent<SpriteRenderer>().color = Color.white;
-                }
 
                 if(rooms.Count % 5 == 0 && roomsGenerated.Count > 0)
                 {
-                    roomsGenerated[0].gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                    Instantiate(torchPrefab, roomsGenerated[0].transform.position, Quaternion.identity);
                 }
 
                 iterations -= roomsGenerated.Count;

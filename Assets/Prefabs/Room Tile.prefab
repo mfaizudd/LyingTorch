@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3292531678603518130}
   - component: {fileID: 8395041294991921627}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6465622408167216632}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1202941374391879452}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Room Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 265369641906827863}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Corridors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6597330684619239503}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Room Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 1155525829053596115}
   - component: {fileID: 6649245930968961896}
   - component: {fileID: 7421152316452836194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Corridor Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328337983912305960}
   - component: {fileID: 8858291620695141873}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2345087185771518323}
   - component: {fileID: 6082730636773291656}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Upper Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4955040758106947523}
   - component: {fileID: 7848086166662077651}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 7508567089757573377}
   - component: {fileID: 1117407592769558714}
   - component: {fileID: 7615174355600195607}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Corridor Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4476503815100457687}
   - component: {fileID: 9082484501655953345}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2580398757511942810}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3345600039561741897}
   - component: {fileID: 4209118961264750660}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6125458744830355024}
   - component: {fileID: 7717528729546128159}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920804297769440956}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5643258834745948671}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Room Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2986148882837743136}
   - component: {fileID: 3035797428850761766}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582746775560247652}
   - component: {fileID: 5746104733649930482}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2389790567312854574}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7187342117746883337}
   - component: {fileID: 2916907492135283914}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8845146975582784546}
   - component: {fileID: 5958007026559023105}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1105,7 +1105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3457982178319281550}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Room Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5918442404069142529}
   - component: {fileID: 749958334657292376}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Upper Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1197,7 +1197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 760482217829761009}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4262891501167432729}
   - component: {fileID: 2697909299733758041}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1288,7 +1288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3388785719608655546}
   - component: {fileID: 8042212981016570557}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: 5144105843697476960}
   - component: {fileID: 1507702094798387090}
   - component: {fileID: 5733498137962731198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Corridor Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1443,7 +1443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8428942070719754254}
   - component: {fileID: 586881873928880420}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,7 +1500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287979525064490529}
   - component: {fileID: 5921443568952124030}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 1451724248981850869}
   - component: {fileID: 3506360658974542976}
   - component: {fileID: 4924543705682487437}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Corridor Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1657,7 +1657,7 @@ GameObject:
   - component: {fileID: 5794548265400676750}
   - component: {fileID: 239602199015314520}
   - component: {fileID: 4421559844772260609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Room Tile
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1752,6 +1752,9 @@ MonoBehaviour:
   roomSpawns: []
   roomPrefab: {fileID: 239602199015314520}
   roomCheckRadius: 1
+  roomLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!61 &4421559844772260609
 BoxCollider2D:
   m_ObjectHideFlags: 0

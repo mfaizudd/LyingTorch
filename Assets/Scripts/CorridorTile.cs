@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class CorridorTile : MonoBehaviour
 {
+    private bool haveRoom = false;
     public bool HaveRoom
     {
-        get => connectedRoom != null;
-    }
-    private RoomTile connectedRoom;
-    public RoomTile ConnectedRoom
-    {
-        get => connectedRoom;
+        get => haveRoom;
         set
         {
-            connectedRoom = value;
-            gameObject.SetActive(value != null);
-            barrier.SetActive(value == null);
+            haveRoom = value;
+            gameObject.SetActive(value);
+            barrier.SetActive(!value);
         }
     }
 

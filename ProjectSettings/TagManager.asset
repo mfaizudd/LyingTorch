@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Room
+  - Torch
   layers:
   - Default
   - TransparentFX
@@ -16,10 +17,10 @@ TagManager:
   - 
   - Wall
   - Map
-  - 
-  - 
-  - 
-  - 
+  - Room
+  - Player
+  - Protection
+  - Another World
   - 
   - 
   - 
