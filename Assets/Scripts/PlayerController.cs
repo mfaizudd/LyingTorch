@@ -42,14 +42,12 @@ public class PlayerController : MonoBehaviour
     {
         if (IsDead) return;
 
-        movementX = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
-        movementY = Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime;
+        movementX = Input.GetAxis("Horizontal") * movementSpeed;
+        movementY = Input.GetAxis("Vertical") * movementSpeed;
 
-        if(interactableTorch != null && Input.GetButtonDown("Interact"))
-        {
-            interactableTorch.Pick(torch);
-            interactableTorch = null;
-        }
+        if (interactableTorch == null || !Input.GetButtonDown("Interact")) return;
+        interactableTorch.Pick(torch);
+        interactableTorch = null;
     }
 
     private void FixedUpdate()

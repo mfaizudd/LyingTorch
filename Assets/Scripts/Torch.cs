@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine.Rendering.Universal;
 
 public class Torch : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class Torch : MonoBehaviour
     private void Start()
     {
         if(_light == null)
-            _light = GetComponent<Light2D>();
+            _light = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         if (protection == null)
             protection = GetComponent<CircleCollider2D>();
     }
